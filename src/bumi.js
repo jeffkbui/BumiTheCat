@@ -8,7 +8,7 @@ export default class Bumi {
 
     createBumi() {
         //body
-        const bodyGeometry = new THREE.CylinderGeometry(.52, 1.1, 1.2, 6);
+        const bodyGeometry = new THREE.CylinderGeometry(.52, 1.1, 1.2, 32);
         const bodyMaterial = new THREE.MeshLambertMaterial({color: 0xF5F5F5, wireframe: false });
         this.bumi.body = new THREE.Mesh(bodyGeometry, bodyMaterial);
         this.bumi.body.position.y = -.5;
@@ -56,8 +56,9 @@ export default class Bumi {
         const rightLegMaterial = new THREE.MeshLambertMaterial({color: 0x585858, wireframe: false });
         this.bumi.rightLeg = new THREE.Mesh(rightLegGeometry, rightLegMaterial);
         this.bumi.body.add(this.bumi.rightLeg);
+        this.bumi.rightLeg.rotateX(-0.7);
         this.bumi.rightLeg.position.z = 1.04;
-        this.bumi.rightLeg.position.y = -.45;
+        this.bumi.rightLeg.position.y = -.48;
         this.bumi.rightLeg.position.x = .09;
 
         //left leg
@@ -65,8 +66,9 @@ export default class Bumi {
         const leftLegMaterial = new THREE.MeshLambertMaterial({color: 0x585858, wireframe: false });
         this.bumi.leftLeg = new THREE.Mesh(leftLegGeometry, leftLegMaterial);
         this.bumi.body.add(this.bumi.leftLeg);
+        this.bumi.leftLeg.rotateX(-0.7);
         this.bumi.leftLeg.position.z = 1.04;
-        this.bumi.leftLeg.position.y = -.45;
+        this.bumi.leftLeg.position.y = -.48;
         this.bumi.leftLeg.position.x = -.09;
 
         //tail

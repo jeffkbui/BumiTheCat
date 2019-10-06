@@ -9,7 +9,7 @@ export default class Floor {
     createFloor() {
         const floor = new THREE.Object3D;
 
-        const floorGeometry = new THREE.CylinderGeometry(3, 3, 0.5, 32);
+        const floorGeometry = new THREE.CylinderGeometry(3, 3, 0.5, 100);
         const floorMaterial = new THREE.MeshLambertMaterial({color: 0xD9B382});
         const mainFloor = new THREE.Mesh(floorGeometry, floorMaterial);
         floor.add(mainFloor);
