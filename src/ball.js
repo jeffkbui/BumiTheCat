@@ -13,7 +13,7 @@ export default class Ball {
         const ballMaterial = new THREE.MeshLambertMaterial({color: 0xFF0000});
         const mainball = new THREE.Mesh(ballGeometry, ballMaterial);
         ball.add(mainball);
-        ball.position.y = -0.8;
+        ball.position.y = -0.9;
         ball.position.z = 2.7;
         ball.position.x = -0.6;
 
